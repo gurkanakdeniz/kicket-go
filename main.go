@@ -59,22 +59,20 @@ func example(c *gin.Context) {
 	// 		return "Hello " + strings.ToUpper(name), nil
 	// 	}
 	// `
-	
-	exampleCode := `// you shouldn't change this -> <func ex(args ...string) string> , < package main > 
-	// you can add import but you shouldn't delete current import 
-	`
-	
-	exampleCode = exampleCode + `package main
+	exampleCode := `// you shouldn't change this -> <func ex(args ...string) string> , < package main >
+	// you can add import but you shouldn't delete current import
 
-	import (
-		"fmt"
-		"os"
-	)
+package main
 
-	func ex(args ...string) string {
-		response := args[1]
-		return response
-	}`
+import (
+	"fmt"
+	"os"
+)
+
+func ex(args ...string) string {
+	response := args[1]
+	return response
+}`
 
 	exampleRequest := `{
     "args" : "jedi"
@@ -129,7 +127,7 @@ func run(c *gin.Context) {
 	// code := getCode(uuidStr)
 
 	log.Println("------jedi------")
-	
+
 	//for _, pair := range os.Environ() {
 	//    fmt.Println(pair)
 	//}
