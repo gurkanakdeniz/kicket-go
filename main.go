@@ -59,26 +59,27 @@ func example(c *gin.Context) {
 	// 		return "Hello " + strings.ToUpper(name), nil
 	// 	}
 	// `
-	exampleCode := `// you shouldn't change this -> <func ex(args ...string) string> , < package main >
+	exampleComment := `
+	// you shouldn't change this -> <func ex(args ...string) string> , < package main >
 	// you can add import but you shouldn't delete current import
-
-package main
-
-import (
-	"fmt"
-	"os"
-)
-
-func ex(args ...string) string {
-	response := args[1]
-	return response
-}`
+	`
+	
+	exampleCode := `package main
+	import (
+		"fmt"
+		"os"
+	)
+	func ex(args ...string) string {
+		response := args[1]
+		return response
+	}`
 
 	exampleRequest := `{
     "args" : "jedi"
   }`
 
 	c.JSON(http.StatusOK, gin.H{
+		"exampleComment": exampleComment,
 		"exampleCode":    exampleCode,
 		"exampleRequest": exampleRequest,
 	})
