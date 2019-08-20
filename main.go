@@ -65,15 +65,15 @@ func example(c *gin.Context) {
 
 	exampleCode := `package main
 
-	import (
-		"fmt"
-		"os"
-	)
+        import (
+                "fmt"
+                "os"
+        )
 
 	func ex(args ...string) string {
-		response := args[1]
-		return response
-	}`
+                response := args[1]
+                return response
+        }`
 
 	exampleRequest := `{
     "args" : "jedi"
