@@ -81,6 +81,7 @@ func ex(args ...string) string {
   }`
 
 	c.JSON(http.StatusOK, gin.H{
+		"exampleComment": exampleComment,
 		"exampleCode":    exampleCode,
 		"exampleRequest": exampleRequest,
 	})
