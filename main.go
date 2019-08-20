@@ -62,6 +62,7 @@ func example(c *gin.Context) {
 	exampleComment := `// you shouldn't change this -> <func ex(args ...string) string> , < package main >
 // you can add import but you shouldn't delete current import
 `
+
 	exampleCode := `package main
 
 	import (
