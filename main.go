@@ -64,7 +64,7 @@ func example(c *gin.Context) {
 `
 
 	exampleCode := `package main
-	
+
 	import (
 		"fmt"
 		"os"
