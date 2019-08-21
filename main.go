@@ -62,13 +62,13 @@ func example(c *gin.Context) {
 	exampleCode := `package main
 
 import (
-		"fmt"
-		"os"
-	)
+	"fmt"
+	"os"
+)
 
 func ex(args ...string) string {
-		response := args[1]
-		return response
+	response := args[1]
+	return response
 }`
 	
 	exampleComment := `// you shouldn't change this -> <func ex(args ...string) string> , < package main >
