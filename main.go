@@ -61,15 +61,15 @@ func example(c *gin.Context) {
 	// `
 	exampleCode := `package main
 
-	import (
+import (
 		"fmt"
 		"os"
 	)
 
-	func ex(args ...string) string {
+func ex(args ...string) string {
 		response := args[1]
 		return response
-	}`
+}`
 	
 	exampleComment := `// you shouldn't change this -> <func ex(args ...string) string> , < package main >
 // you can add import but you shouldn't delete current import
